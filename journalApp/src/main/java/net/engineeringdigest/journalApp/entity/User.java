@@ -20,6 +20,8 @@ public class User {
 	@Id
 	private ObjectId id;
 	
+	private List<String> roles;
+	
 	@NonNull
 	@Indexed(unique = true)
 	private String userName;
@@ -60,5 +62,13 @@ public class User {
 
 	public void setGetjournalEntries(List<JournalEntry> getjournalEntries) {
 		this.getjournalEntries = getjournalEntries;
+	}
+
+	public List<String> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
 	} 
 }
